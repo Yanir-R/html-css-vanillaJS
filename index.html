@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body >
+<script type="text/javascript" src="app.js"></script> 
+    <div class="container">
+        <!-- <div class="" onclick="cardHandler()">add to cart</div> -->
+        <div class="bubble" >
+            <h1 class="header" >Purchase Water</h1>
+            <section class="cardContainer">
+        <div class="cardBox">
+            <div class="bottleBackgroundLeftSide">
+               <div class="bottlePositionLeftSide">
+                   <div class="bottleTextBoxLeft">6 BOTTLE PACK
+                       <div class="bottlePriceBoxLeft">$2.5 / pack
+                       </div>
+                       <div class="priceCalculator">     
+                        <button class="btnInfo"  value="plus" id="totalAmountSmall" onclick="add('small'); " >+</button>
+                        <span class="myInputSize" id="number">0</span>
+                        <button class="btnInfo" value="minus" id="totalAmountSmall" onclick="remove('small'); ">-</button>
+                    </div>
+                   </div>
+                </div>
+                </div>
+    <div class="bottleBackgroundCenter">
+        <div class="bestPriceBackground"> 
+        <div class="bestPriceBanner">Best Price!</div>
+    </div>
+        <div class="bottlePositionCenter">
+            <div class="bottleTextBoxCenter">12 BOTTLE PACK
+                <div class="bottlePriceBoxCenter">$4.66 / pack
+                </div>
+                <div class="priceCalculator">     
+                    <button class="btnInfo" value="plus" id="totalAmountMedium" onclick="add('medium'); ">+</button>
+                    <span class="myInputSize" id="number" >0</span>
+                    <button class="btnInfo" value="minus" id="totalAmountMedium" onclick="remove('medium'); ">-</button>
+                </div>
+            </div>
+             </div>
+    </div>
+    <div class="bottleBackgroundRightSide">
+        <div class="bottlePositionRightSide">
+            <div class="bottleTextBoxRight">24 BOTTLE PACK
+                <div class="bottlePriceBoxRight">$9 / pack
+                </div>
+                <div class="priceCalculator">     
+                    <button class="btnInfo increment" value="plus" id="totalAmountLarge" onclick="add('large')">+</button>
+                    <span class="myInputSize" id="number" >0</span>
+                    <button class="btnInfo decrement" value="minus" id="totalAmountLarge" onclick="remove('large')">-</button>
+
+                </div>
+            </div>
+             </div>
+    </div>
+</div>
+</section>
+   </div>
+  <div class="rectangle "> 
+
+        <section class="billingContainer">
+           <div class="billingBox">
+               <div class="imgLadyPosition"> </div> 
+            <div class="billingInfo">
+                <h1 class="billingHeader">Billing Info</h1> 
+                <div class="formGroupContainer">
+                    <div class="inputPosition">
+               <div class = "form-group">
+                <label for = "fname">First Name</label>
+                <input type ="text"  name = "fname" value = "" class = "form-control">cd
+            </div>
+            <div class = "form-group">
+                <label for = "lname">Last Name</label>
+                <input type = "text" name = "lname" value ="" class = "form-control ">
+            </div>
+        </div>
+            <div class = "form-group">
+                <label for = "email">Email</label>
+                <input type ="email" name = "email" value ="" class = "form-control emailInput">
+            </div>
+        </div>
+         
+           <!--  <div class="bottlePackContainer">
+                <h1 class="p">12 BOTTLE PACK</h1>
+                <h1>Packs quantity</h1>
+                <input class="myInputSize" type="number" />
+            </div> -->
+            
+            <div class="borderLine"></div>
+            <div class="totalNumberContainer">
+                <div class="totalNumber">
+                <h1>Your total</h1>
+                <span type="number" class="totalNumberPosition" id="totalAmount"></span>
+            </div>
+            </div>
+    </div> 
+
+            </div>
+         
+        </section>
+     
+    </div>
+</div>
+        
+</body>
+</html>
+
