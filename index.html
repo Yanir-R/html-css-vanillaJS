@@ -1,116 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>JS Project</title>
-      <link rel="stylesheet" href="styles.css">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-   </head>
-   <body >
-       <script type="text/javascript" src="app.js"></script>
-       <div class="container">
-        <div class="bubble" >
-         <!-- <div class="" onclick="cardHandler()">add to cart</div> -->
-            <h1 class="header" >Purchase Water</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script type="text/javascript" src="app.js"></script>
+    <div class="container">
+        <div class="bubble">
+            <!-- <div class="" onclick="cardHandler()">add to cart</div> -->
+            <h1 class="header">Purchase Water</h1>
             <section class="cardContainer">
-               <div class="cardBox">
-                  <div class="bottleBackgroundLeftSide">
-                     <div class="bottlePositionLeftSide">
-                        <div class="bottleTextBoxLeft">
-                           6 BOTTLE PACK
-                           <div class="bottlePriceBoxLeft">$2.5 / pack
-                           </div>
-                           <div class="priceCalculator">
-                              <button class="btnInfo"  value="plus" id="totalAmountSmall" onclick="add('small'); " >+</button>
-                              <span class="quantityInput" id="small">0</span>
-                              <button class="btnInfo" value="minus" id="totalAmountSmall" onclick="remove('small'); ">-</button>
-                           </div>
+                <div class="cardBox">
+                    <div class="bottleBackgroundLeftSide">
+                        <div class="bottlePositionLeftSide">
+                            <div class="bottleTextBoxLeft">
+                                 6 BOTTLE PACK
+                                <div class="bottlePriceBoxLeft">$2.5 / pack
+                                </div>
+                                <div class="priceCalculator">
+                                    <button  class="btnInfo" value="plus" id="totalAmountSmall" onclick="add('small'); ">+</button>
+                                    <span class="quantityInput" id="small">0</span>
+                                    <button class="btnInfo" value="minus" id="totalAmountSmall" onclick="remove('small'); ">-</button>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <div class="bottleBackgroundCenter">
-                     <div class="bestPriceBackground">
-                        <div class="bestPriceBanner">Best Price!</div>
-                     </div>
-                     <div class="bottlePositionCenter">
-                        <div class="bottleTextBoxCenter">
-                           12 BOTTLE PACK
-                           <div class="bottlePriceBoxCenter">$4.66 / pack
-                           </div>
-                           <div class="priceCalculator">
-                              <button class="btnInfo" value="plus" id="totalAmountMedium" onclick="add('medium'); ">+</button>
-                              <span class="quantityInput" id="medium" >0</span>
-                              <button class="btnInfo" value="minus" id="totalAmountMedium" onclick="remove('medium'); ">-</button>
-                           </div>
+                    </div>
+                    <div class="bottleBackgroundCenter">
+                        <div class="bestPriceBackground">
+                            <div class="bestPriceBanner">Best Price!</div>
                         </div>
-                     </div>
-                  </div>
-                  <div class="bottleBackgroundRightSide">
-                     <div class="bottlePositionRightSide">
-                        <div class="bottleTextBoxRight">
-                           24 BOTTLE PACK
-                           <div class="bottlePriceBoxRight">$9 / pack
-                           </div>
-                           <div class="priceCalculator">
-                              <button class="btnInfo increment" value="plus" id="totalAmountLarge" onclick="add('large')">+</button>
-                              <span class="quantityInput" id="large" >0</span>
-                              <button class="btnInfo decrement" value="minus" id="totalAmountLarge" onclick="remove('large')">-</button>
-                           </div>
+                        <div class="bottlePositionCenter">
+                            <div class="bottleTextBoxCenter">
+                                12 BOTTLE PACK
+                                <div class="bottlePriceBoxCenter">$4.66 / pack
+                                </div>
+                                <div class="priceCalculator">
+                                    <button class="btnInfo" value="plus" id="totalAmountMedium" onclick="add('medium'); ">+</button>
+                                    <span class="quantityInput" id="medium">0</span>
+                                    <button class="btnInfo" value="minus" id="totalAmountMedium" onclick="remove('medium'); ">-</button>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                    <div class="bottleBackgroundRightSide">
+                        <div class="bottlePositionRightSide">
+                            <div class="bottleTextBoxRight">
+                                24 BOTTLE PACK
+                                <div class="bottlePriceBoxRight">$9 / pack
+                                </div>
+                                <div class="priceCalculator">
+                                    <button class="btnInfo increment" value="plus" id="totalAmountLarge" onclick="add('large')">+</button>
+                                    <span class="quantityInput" id="large">0</span>
+                                    <button class="btnInfo decrement" value="minus" id="totalAmountLarge" onclick="remove('large')">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-         </div>
-         <div class="rectangle "> 
-         <section class="billingContainer">
-            <div class="billingBox">
-               <div class="imgLadyPosition"> </div>
-               <div class="billingInfo">
-                  <h1 class="billingHeader">Billing Info</h1>
-                  <div class="formGroupContainer">
-                     <div class="inputPosition">
-                        <div class = "form-group">
-                           <label for = "fname">First Name</label>
-                           <input type ="text"  name = "fname" value = "" class = "form-control">
+        </div>
+        <div class="rectangle ">
+            <section class="billingContainer">
+                <div class="billingBox">
+                    <div class="imgLadyPosition"> </div>
+                    <div class="billingInfo">
+                        <h1 class="billingHeader">Billing Info</h1>
+                        <div class="formGroupContainer">
+                            <form>
+                                <div class="inputPosition">
+                                    <div class="form-group">
+                                        <label for="fname">First Name</label>
+                                        <input type="text" aria-describedby="name-format"  aria-required=”true” class="form-control" pattern="[a-zA-Z]{2,70}" required>   
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lname">Last Name</label>
+                                        <input type="text" aria-describedby="name-format"  aria-required=”true” class="form-control" pattern="[a-zA-Z]{2,70}" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control emailInput" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                </div>
+                            </form>
                         </div>
-                        <div class = "form-group">
-                           <label for = "lname">Last Name</label>
-                           <input type = "text" name = "lname" value ="" class = "form-control ">
+                        <div class="bottlePackContainer">
+                            <div class="bottlePackInfo">
+                                <div class="bottlePackNumber">
+                                    <h1>6 BOTTLE PACK</h1>
+                                </div>
+                                <div class="packQuantityNumber">
+                                    <h1>Packs quantity</h1>
+                                </div>
+                                &nbsp &nbsp <span class="quantityInput" id="quantityInputNumber" type="number"></span>
+                            </div>
                         </div>
-                     </div>
-                     <div class = "form-group">
-                        <label for = "email">Email</label>
-                        <input type ="email" name = "email" value ="" class = "form-control emailInput">
-                     </div>
-                  </div>
-                  <div class="bottlePackContainer">
-                      <div class="bottlePackInfo">
-                          <div class="bottlePackNumber">
-                     <h1>12 BOTTLE PACK</h1>
+                        <div class="bottlePackContainer">
+                            <div class="bottlePackInfo">
+                                <div class="bottlePackNumber">
+                                    <h1>12 BOTTLE PACK</h1>
+                                </div>
+                                <div class="packQuantityNumber">
+                                    <h1>Packs quantity</h1>
+                                </div>
+                                &nbsp <span class="quantityInput" id="quantityInputNumber" type="number"></span>
+                            </div>
+                        </div>
+                        <div class="bottlePackContainer">
+                            <div class="bottlePackInfo">
+                                <div class="bottlePackNumber">
+                                    <h1>24 BOTTLE PACK</h1>
+                                </div>
+                                <div class="packQuantityNumber">
+                                    <h1>Packs quantity</h1>
+                                </div>
+                                &nbsp <span class="quantityInput" id="quantityInputNumber" type="number"></span>
+                            </div>
+                        </div>
+                        <div class="borderLine"></div>
+                        <div class="totalNumberContainer">
+                            <div class="totalNumber">
+                                <h1>Your total</h1>
+                                <span class="totalNumberPosition" id="totalAmount">$0.00</span>
+                            </div>
+                        </div>
+                        <div class="checkoutBackground">
+                            <button class="buttonImg" type="submit">
+                                <img role="button" class="checkoutButtonImg" src="./PICS/checkoutbtn.png" alt="">
+                            </button>
+                        </div>
                     </div>
-                    <div class="packQuantityNumber">
-                     <h1>Packs quantity</h1>
-                    </div>
-                     <input class="quantityInput" type="number" />
-                     </div> 
-                    </div>
-                  <div class="borderLine"></div>
-                  <div class="totalNumberContainer">
-                     <div class="totalNumber">
-                        <h1>Your total</h1>
-                        <span class="totalNumberPosition" id="totalAmount">$0.00</span>
-                    </div>
-                    <div class="checkoutBackground">
-                        <button class="checkoutButton" onclick="">Checkout</button>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         </div>
-      </div>
-   </body>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
 </html>

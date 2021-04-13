@@ -4,44 +4,26 @@ let data = {
 	lastName: '',
 	email: '',
 	totalAmount: 0,
+	// inputAmount: 0,
 	quantities: {
 		small: 0,
 		medium: 0,
 		large: 0
 	},
-	bottleInfo: {
-		small: '6 BOTTLE PACK',
-		medium: '12 BOTTLE PACK',
-		large: '24 BOTTLE PACK'
-	}
 }
 
-function add(itemType, increaseInputValue, decrementInputValue) {
-	// let input = increaseInputValue.previousElementSibling;
-	// let value = parseInt(input.value, 10);
-	// value = isNaN(value) ? 0 : value;
-	// value++
-	// input.value = value
-	
+function add(itemType) {	
 	data.quantities[itemType]++;
 	data.totalAmount += prices[itemType];
 	updateQuantity(itemType);
 	updateBalance();
 }
 
-function remove(itemType, increaseInputValue, decrementInputValue) {
+function remove(itemType ) {
 	if (data.quantities[itemType] === 0) {
 		alert('you do not have any packages');
 		return;
 	}
-
-	// let input = decrementInputValue.nextElementSibling;
-	// let value = parseInt(input.value, 10);
-	// if (value > 1) {
-	// 	value = isNaN(value) ? 0 : value;
-	// 	value--;
-	// 	input.value = value;
-	// }
 
 	data.totalAmount -= prices[itemType];
 	data.quantities[itemType]--;
@@ -52,6 +34,10 @@ function remove(itemType, increaseInputValue, decrementInputValue) {
 function updateQuantity(itemType) {
 	const quantityInput = document.querySelector(`.quantityInput#${itemType}`)
 	quantityInput.innerText = data.quantities[itemType]
+	
+	// const quantityInputNumber = document.querySelector(`.quantityInputNumber#${itemType}`)
+	// quantityInputNumber.innerText = data.inputAmount[itemType]
+	
 
 }
 
@@ -84,6 +70,7 @@ function load() {
 	data = JSON.parse(rawData)
 
 }
+
 // function updateAmount(that) {
 // 	var number = document.getElementById('number');
 // 	var num = parseInt(number.innerHTML);

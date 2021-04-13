@@ -15,6 +15,7 @@ body{
 }
 
 .header{
+    display: list-item;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -29,7 +30,7 @@ body{
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;
-  }
+}
 
 .rectangle { 
     border-radius: 12px;
@@ -39,10 +40,7 @@ body{
 }
 
   .cardContainer{
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center; 
+  display: flex;
   }
 .cardBox{
     display: flex;
@@ -53,19 +51,12 @@ body{
     justify-content: center; 
 }
 
-@media screen and (max-width: 980px) {
-    .cardBox {
-        flex-direction: column;
-    }
-}
-
 .imgLadyPosition{
     height: 549px;
     background: url('./PICS/lady.png');
     background-repeat: no-repeat ; 
     width: 525px;
     background-position: center;
-    
 }
 
 .bottleBackgroundLeftSide{
@@ -78,7 +69,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: 24px ;
-    }
+}
 
 .bottlePositionLeftSide{
     width: 204.37px;
@@ -123,7 +114,6 @@ body{
     display: flex;
     align-items: center;
     text-align: center;
-
     color: #FFFFFF;
 }
 
@@ -171,9 +161,8 @@ body{
     font-style: normal;
     font-weight: 300;
     font-size: 25px;
-    line-height: 35px;
     text-align: center; 
-    margin-top: 45%;
+    margin-top: 60%;
     color: #4955F5; 
 }
 
@@ -185,7 +174,6 @@ body{
     line-height: 45px;
     text-align: center; 
     color: #4955F5;
-    line-height: 70px;
 }
 
 .bottleTextBoxRight{
@@ -199,8 +187,6 @@ body{
     color: #4955F5; 
 }
 
-
-
 .bottlePriceBoxRight{
     font-family: Roboto;
     font-style: normal;
@@ -209,9 +195,7 @@ body{
     line-height: 45px;
     text-align: center; 
     color: #4955F5;
-  
 }
-
 
 .priceCalculator{
     display: flex;
@@ -224,7 +208,6 @@ body{
     font-weight: bold;
     font-size: 14px;
     margin: 5%;
-
     width: 23px;
     height: 22px;
     text-align: center;
@@ -240,6 +223,9 @@ body{
 }
 
 .quantityInput{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
     width: 31.2px;
     height: 30.09px;
     border: 1px solid #4955F5;
@@ -247,25 +233,19 @@ body{
     border-radius: 5px;
     justify-content: center;
     color: #4955F5;
+    font-size: 14px;
+    text-align: center;
+    align-self: center;
   
-}s
+}
 
 .billingContainer{
-    border-radius: 12px;
-    background: #FFFFFF; 
-    display: flex;  
-    justify-content: center;
+    
 }
 
 .billingBox{
     display: flex;
     flex-direction: row;
-}
-
-@media screen and (max-width: 980px) {
-    .billingBox {
-        flex-direction: column-reverse;
-    }
 }
 
 .billingHeader{
@@ -300,14 +280,15 @@ body{
     border: 1px solid #4955F5;
     box-sizing: border-box;
     border-radius: 5px;
-  }
+}
+
 .emailInput{
     width: 304px;
     height: 33px;
 }
 
 .bottlePackContainer{
-     
+
 }
 
 .bottlePackInfo{
@@ -323,7 +304,6 @@ body{
 
 .inputPosition{
     display: flex;
-   
 }
 
 .bottlePackNumber{
@@ -372,24 +352,61 @@ color: #4955F5;
     background: #FFFFFF;
     border-radius: 12px;
     margin-top: 10%;
-  
 }
 
 .checkoutBackground{
-    width: 172px;
-    height: 52px;
-    background: #4955F5;
-    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonImg{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.checkoutButtonImg{
+
+}
+
+.billingInfo{
+    align-self: center;
 }
 
 
-.checkoutButton{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    
-    color: #FFFFFF;
+.error {
+    display:none;
+    color:red;
+}
+
+input:valid,
+input:in-range {
+    background:hsl(120, 50%, 90%);
+  
+}
+
+input:invalid,
+input:out-of-range {
+  
+    background:hsl(0, 50%, 90%);
+}
+input:focus + .help,
+input:invalid + .help {
+    display:inline-block;
+}
+
+
+@media screen and (max-width: 1440px) and (min-width: 320px) {
+    .billingBox {
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (max-width: 980px) {
+    .cardBox {
+        flex-direction: column;
+    }
 }
