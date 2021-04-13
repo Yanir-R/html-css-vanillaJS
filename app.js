@@ -1,60 +1,95 @@
-const prices = {small:2.5, medium: 4.66, large:9}
-let data = {firstName:'', lastName:'', email:'', totalAmount:0, items:{small:0, medium: 0, large:0}, bottleInfo:{small:'6 BOTTLE PACK', medium: '12 BOTTLE PACK', large:'24 BOTTLE PACK'}}
-
-function add(itemType){
-
-	data.totalAmount += prices[itemType];
-	data.items[itemType]++;
-
-	updateGUI();
+const prices = { small: 2.5, medium: 4.66, large: 9 }
+let data = {
+	firstName: '',
+	lastName: '',
+	email: '',
+	totalAmount: 0,
+	quantities: {
+		small: 0,
+		medium: 0,
+		large: 0
+	},
+	bottleInfo: {
+		small: '6 BOTTLE PACK',
+		medium: '12 BOTTLE PACK',
+		large: '24 BOTTLE PACK'
+	}
 }
 
-function remove(itemType){
-	if(data.items[itemType] === 0){
+function add(itemType, increaseInputValue, decrementInputValue) {
+	// let input = increaseInputValue.previousElementSibling;
+	// let value = parseInt(input.value, 10);
+	// value = isNaN(value) ? 0 : value;
+	// value++
+	// input.value = value
+	
+	data.quantities[itemType]++;
+	data.totalAmount += prices[itemType];
+	updateQuantity(itemType);
+	updateBalance();
+}
+
+function remove(itemType, increaseInputValue, decrementInputValue) {
+	if (data.quantities[itemType] === 0) {
 		alert('you do not have any packages');
 		return;
 	}
+
+	// let input = decrementInputValue.nextElementSibling;
+	// let value = parseInt(input.value, 10);
+	// if (value > 1) {
+	// 	value = isNaN(value) ? 0 : value;
+	// 	value--;
+	// 	input.value = value;
+	// }
+
 	data.totalAmount -= prices[itemType];
-	data.items[itemType]--;
-	updateGUI();
+	data.quantities[itemType]--;
+	updateQuantity(itemType);
+	updateBalance();
 }
 
-function updateGUI(){
+function updateQuantity(itemType) {
+	const quantityInput = document.querySelector(`.quantityInput#${itemType}`)
+	quantityInput.innerText = data.quantities[itemType]
+
+}
+
+function updateBalance() {
 	const totalAmountSMall = document.getElementById('totalAmountSmall');
-	const totalSmall = data.items.small * prices.small;
+	const totalSmall = data.quantities.small * prices.small;
 	// totalAmountSMall.innerText = totalSmall;
 
 	const totalAmountMedium = document.getElementById('totalAmountMedium');
-	const totalMedium = data.items.medium * prices.medium;
+	const totalMedium = data.quantities.medium * prices.medium;
 	// totalAmountMedium.innerText = totalMedium;
 
 	const totalAmountLarge = document.getElementById('totalAmountLarge');
-	const totalLarge = data.items.large * prices.large;
+	const totalLarge = data.quantities.large * prices.large;
 	// totalAmountLarge.innerText = totalLarge;
 
 	const totalAmount = document.getElementById('totalAmount');
-	totalAmount.innerText = totalSmall + totalMedium + totalLarge;
+	totalAmount.innerText = `$${parseFloat(totalSmall + totalMedium + totalLarge).toFixed(2)}`
 }
 
-function save(){
+function save() {
 	localStorage.setItem('data', JSON.stringify(data));
 }
 
-function load(){
+function load() {
 	const rawData = localStorage.getItem('data');
-	if(!rawData){
+	if (!rawData) {
 		return;
 	}
 	data = JSON.parse(rawData)
 
 }
-
-function updateAmount(that) {
-    var number = document.getElementById('number');
-      var num = parseInt(number.innerHTML);
-      num = (that.value == "minus") ? --num : ++num;
-      number.innerHTML = num;
-    }
+// function updateAmount(that) {
+// 	var number = document.getElementById('number');
+// 	var num = parseInt(number.innerHTML);
+// 	num = (that.value == "minus") ? --num : ++num;
+// 	number.innerHTML = num;
+// }
 
 // function displayPattern(pattern) {
 //     const $li = document.createElement('li')
@@ -80,14 +115,14 @@ function updateAmount(that) {
 //     const bestPriceBanner = document.createElement('div')
 //     bestPriceBanner.classList.add('bestPriceBanner')
 //     bestPriceBackground.appendChild(bestPriceBanner)
-    
+
 
 //     const bottlePositionCenter = document.createElement('div')
 //     bottlePositionCenter.classList.add('bottlePositionCenter')
 //     center.appendChild(bottlePositionCenter)
 
 //     return center
-    
+
 // }
 
 // function cardHandler() {

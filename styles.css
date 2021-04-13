@@ -5,7 +5,10 @@ body{
 .container {
     display: flex;
     flex-direction: column;     
-  }
+    max-width: 1440px;
+    margin: 0 auto auto auto;
+}
+
 .container > * {
     flex: 1 100%;
     padding: 10px;
@@ -24,9 +27,16 @@ body{
 .bubble {  
     background-image: url('./PICS/bubbles-bg.png');
     background-repeat: no-repeat;
-    background-position: center;  
-   
+    background-position: center; 
+    background-size: cover;
   }
+
+.rectangle { 
+    border-radius: 12px;
+    background: #FFFFFF; 
+    display: flex;  
+    justify-content: center;
+}
 
   .cardContainer{
     flex-direction: column;
@@ -43,11 +53,10 @@ body{
     justify-content: center; 
 }
 
-.rectangle { 
-    border-radius: 12px;
-    background: #FFFFFF; 
-    display: flex;  
-    justify-content: center;
+@media screen and (max-width: 980px) {
+    .cardBox {
+        flex-direction: column;
+    }
 }
 
 .imgLadyPosition{
@@ -115,7 +124,7 @@ body{
     align-items: center;
     text-align: center;
 
-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .bottleBackgroundRightSide{
@@ -204,16 +213,18 @@ color: #FFFFFF;
 }
 
 
-/* .priceCalculator{
-   
-} */
+.priceCalculator{
+    display: flex;
+    justify-content: center;
+}   
 
 .btnInfo{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    line-height: 20px;
+    margin: 5%;
+
     width: 23px;
     height: 22px;
     text-align: center;
@@ -224,22 +235,37 @@ color: #FFFFFF;
     color: #FFFFFF;
 }
 
-.myInputSize{
+.quantityInputContainer{
+    display: inline-block;
+}
+
+.quantityInput{
     width: 31.2px;
     height: 30.09px;
     border: 1px solid #4955F5;
     box-sizing: border-box;
     border-radius: 5px;
     justify-content: center;
-    color: black;
-}
+    color: #4955F5;
+  
+}s
 
 .billingContainer{
-   
+    border-radius: 12px;
+    background: #FFFFFF; 
+    display: flex;  
+    justify-content: center;
 }
 
 .billingBox{
     display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 980px) {
+    .billingBox {
+        flex-direction: column-reverse;
+    }
 }
 
 .billingHeader{
@@ -248,7 +274,7 @@ color: #FFFFFF;
     font-style: normal;
     font-weight: bold;
     font-size: 38px;
-    line-height: 45px;   
+    line-height: 45px;
 }
 
 .formGroupContainer{
@@ -281,13 +307,12 @@ color: #FFFFFF;
 }
 
 .bottlePackContainer{
+     
+}
+
+.bottlePackInfo{
     display: flex;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
-    color: #4955F5;
+    align-items: center;
 }
 
 .borderLine{
@@ -301,6 +326,23 @@ color: #FFFFFF;
    
 }
 
+.bottlePackNumber{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #4955F5;
+}
+
+.packQuantityNumber{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #4955F5;
+    margin: 17px;
+   
+}
 .totalNumberContainer{
     display: flex;
     font-family: Roboto;
@@ -332,29 +374,22 @@ color: #4955F5;
     margin-top: 10%;
   
 }
-  
-/* @media all and (min-width: 600px) {
-    .cardContainer { flex: 3 0 0; }
-    .billingContainer { flex: 3 0 0; }
 
-  }
-
-@media all and (min-width: 1200px){
-    .bottlePosition {flex: 3 0px;}
-    .header {order: 1;}
-    .bottleBackgroundLeftSide {order: 2;}
-    .bottleBackgroundCenter {order: 3;}
-    .bottleBackgroundRightSide {order: 4;}
-    .billingContainer {order: 5;;}
-    .imgLadyPosition {order: 6;}
-} */
+.checkoutBackground{
+    width: 172px;
+    height: 52px;
+    background: #4955F5;
+    border-radius: 50px;
+}
 
 
-
-
-
-/* @media (max-width: 1440px ){
-    .cardContainer {
-        flex: 1 21%;
-    }
-} */
+.checkoutButton{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
