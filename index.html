@@ -73,23 +73,22 @@
                     <div class="billingInfo">
                         <h1 class="billingHeader">Billing Info</h1>
                         <div class="formGroupContainer">
-                            <form>
+                            <form  action="onOverlay()">
                                 <div class="inputPosition">
                                     <div class="form-group" >
-                                        <label for="fname" id="firstnameOverlay">First Name</label>
-                                        <input  type="text" aria-describedby="name-format" aria-required=”true” class="form-control" pattern="[a-zA-Z]{2,70}" required>
+                                        <label for="fname" >First Name</label>
+                                        <input  type="text" id="firstName" aria-describedby="name-format" aria-required=”true” class="form-control" pattern="[a-zA-Z]{2,70}" required>
                                     </div>
                                     <div class="form-group" >
-                                        <label for="lname" id="lastnameOverlay">Last Name</label>
-                                        <input type="text"  aria-describedby="name-format" aria-required=”true” class="form-control" pattern="[a-zA-Z]{2,70}" required>
+                                        <label for="lname" >Last Name</label>
+                                        <input type="text" id="lastName" aria-describedby="name-format" aria-required=”true” class="form-control" pattern="[a-zA-Z]{2,70}" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <input type="email" class="form-control emailInput" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                                 </div>
-                            </form>
-                        </div>
+                        
                         <div class="bottlePackContainer" id="bottlePackSmallSummary" data-count="0">
                             <div class="bottlePackInfo">
                                 <div class="bottlePackNumber">
@@ -131,17 +130,20 @@
                             </div>
                         </div>
                         <div class="checkoutBackground">
-                            <button class="buttonImg" type="submit" onclick="onOverlay()">
-                                
+                            <button class="buttonImg" type="submit">
                                 <img role="button" class="checkoutButtonImg" src="./PICS/checkoutbtn.png" alt="">
                             </button>
                         </div>
+                    </form>
+                </div>
                         <div id="overlay" onclick="off()" >
                             <div class="viewOverlayContainer">
                             <div class="viewOverlay" id="textLayout">
                             <h4 id="firstnameOverlay"></h4>
                             <h4 id="lastnameOverlay"></h4>
-                            <h4 id="numberOfBottleOverlay"></h4>
+                            <h4 id="numberOfSmallBottleOverlay"></h4>
+                            <h4 id="numberOfMediumBottleOverlay"></h4>
+                            <h4 id="numberOfLargeBottleOverlay"></h4>
                         </div>
                     </div>
                         </div>

@@ -69,6 +69,30 @@ function save() {
 
 function load() {
     const rawData = localStorage.getItem('data');
+    let formClass = document.querySelector('form');
+
+    function submitForm(event) {
+            let pack1 = document.querySelector('#small').innerText 
+            let pack2 = document.querySelector('#medium').innerText
+            let pack3 = document.querySelector('#large').innerText
+        
+            let firstName = document.getElementById('firstName').value;
+            document.getElementById('firstnameOverlay').innerHTML = firstName;
+            document.getElementById("overlay").style.display = "block";
+            
+            let lastName = document.getElementById('lastName').value;
+            document.getElementById('lastnameOverlay').innerHTML = lastName;
+            document.getElementById("overlay").style.display = "block";
+            
+            document.querySelector('#numberOfSmallBottleOverlay').innerHTML = 'Number Of Small Packages:' + pack1
+            document.querySelector('#numberOfMediumBottleOverlay').innerHTML = 'Number Of Large Packages:' + pack2
+            document.querySelector('#numberOfLargeBottleOverlay').innerHTML = 'Number Of Large Packages:' + pack3
+            
+            event.preventDefault();
+    }
+
+    formClass.addEventListener('submit', submitForm);
+
     if (!rawData) {
         return;
     }
@@ -77,26 +101,7 @@ function load() {
     updateQuantity('medium')
     updateQuantity('large')
     updateBalance();
-}
-
-function onOverlay() {
-	const firstnameOverlay = document.getElementById('firstnameOverlay');
-	firstnameOverlay.innerHTML = data.firstName.value
-	document.getElementById("overlay").style.display = "block";
-	
-	const lastnameOverlay = document.getElementById('lastnameOverlay');
-	lastnameOverlay.innerHTML = data.lastName.value
-	document.getElementById("overlay").style.display = "block";
-
-	// const numberOfBottleOverlay = document.getElementById('numberOfBottleOverlay');
-	// numberOfBottleOverlay.innerHTML = data.quantities
-	// document.getElementById("overlay").style.display = "block";
-
-	// const orderPackgesOverlay = document.getElementById('orderPackgesOverlay');
-	// orderPackgesOverlay.innerHTML = data.quantities
-	// document.getElementById("overlay").style.display = "block";
-
-}
+}   
 
 function off() {
 	document.getElementById("overlay").style.display = "none";
