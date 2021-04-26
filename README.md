@@ -25,7 +25,7 @@ This is tiny app to view and simulate items purchase, built with vanillaJS HTML 
 
 ## Instructions
 - Initially the application with <code>index.html</code>
-- Plus and Minus buttons on the product quantity  #### Pressing + will bounce the name of the product that is clicked and its quantity above the our Total button
+- Plus and Minus buttons on the product quantity  <sub><sup> Pressing + will bounce the name of the product that is clicked and its quantity above the our Total button </sub></sup>
 - Calculation of the final amount of all products
 - Clicking on <code>Your Total</code> button will lead to a pop-up message with the purchase details
 
