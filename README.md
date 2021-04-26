@@ -18,16 +18,16 @@ This is tiny app to view and simulate items purchase, built with vanillaJS HTML 
 ## Features
 - [x] Able to add or remove items from his cart.
 - [x] Form Validations
-- [x] The quantity of product orders is saved in <code>localStorage<code>
+- [x] The quantity of product orders is saved in <code>localStorage</code>
 - [x] Calculate total purchase items
 - [X] Popup message with purchase information
 - [X] Responsive Design
 
 ## Instructions
-- Initially the application with <code>index.html<code>
+- Initially the application with <code>index.html</code>
 - Plus and Minus buttons on the product quantity  #### Pressing + will bounce the name of the product that is clicked and its quantity above the our Total button
 - Calculation of the final amount of all products
-- Clicking on <code>Your Total<code> button will lead to a pop-up message with the purchase details
+- Clicking on <code>Your Total</code> button will lead to a pop-up message with the purchase details
 
 
 ## Motivation
