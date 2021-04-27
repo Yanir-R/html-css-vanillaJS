@@ -1,20 +1,20 @@
-body{
+body {
     background-color: #F5FBFF;
 }
 
 .container {
     display: flex;
-    flex-direction: column;     
+    flex-direction: column;
     max-width: 1440px;
     margin: 0 auto auto auto;
 }
 
-.container > * {
-    flex: 1 100%;
+.container>* {
+    /* flex: 1 100%; */
     padding: 10px;
 }
 
-.header{
+.header {
     display: list-item;
     font-family: Roboto;
     font-style: normal;
@@ -22,44 +22,45 @@ body{
     font-size: 103px;
     line-height: 121px;
     text-align: center;
-    color: #4955F5; 
+    color: #4955F5;
 }
-  
-.bubble {  
+
+.bubble {
     background-image: url('./PICS/bubbles-bg.png');
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     background-size: cover;
 }
 
-.rectangle { 
+.rectangle {
     border-radius: 12px;
-    background: #FFFFFF; 
-    display: flex;  
+    background: #FFFFFF;
+    display: flex;
     justify-content: center;
 }
 
-  .cardContainer{
-  display: flex;
-  }
-.cardBox{
+.cardContainer {
     display: flex;
-    padding: 2%;
-    flex-grow: 1; 
-    text-align: center;
-    align-items: center;
-    justify-content: center; 
 }
 
-.imgLadyPosition{
+.cardBox {
+    display: flex;
+    padding: 2%;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgLadyPosition {
     height: 549px;
     background: url('./PICS/lady.png');
-    background-repeat: no-repeat ; 
+    background-repeat: no-repeat;
     width: 525px;
     background-position: center;
 }
 
-.bottleBackgroundLeftSide{
+.bottleBackgroundLeftSide {
     width: 304px;
     height: 361px;
     background: #FFFFFF;
@@ -68,43 +69,43 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 24px ;
+    margin: 24px;
 }
 
-.bottlePositionLeftSide{
+.bottlePositionLeftSide {
     width: 204.37px;
     height: 62px;
     background: url('./PICS/6bttls.png');
 }
 
 
-.bottleBackgroundCenter{ 
+.bottleBackgroundCenter {
     width: 304px;
     height: 407px;
     background: #FFFFFF;
     border: 2px solid #4955F5;
     box-sizing: border-box;
     box-shadow: 0px 0px 18px rgba(73, 85, 245, 0.33);
-    border-radius: 12px;      
+    border-radius: 12px;
 }
 
-.bottlePositionCenter{  
+.bottlePositionCenter {
     width: 204.37px;
     height: 80px;
     background: url('./PICS/12bttls.png');
-    display: inline-flex; 
+    display: inline-flex;
 }
 
-.bestPriceBackground{ 
+.bestPriceBackground {
     width: 192.86px;
-    height: 129.71px; 
+    height: 129.71px;
     background: url('./PICS/Rectanglebestprice.png');
     background-repeat: no-repeat;
-} 
+}
 
-.bestPriceBanner{
+.bestPriceBanner {
     width: 179.4px;
-    height: 34.72px;  
+    height: 34.72px;
     transform: rotate(-30deg);
     font-family: Roboto;
     font-style: normal;
@@ -117,7 +118,7 @@ body{
     color: #FFFFFF;
 }
 
-.bottleBackgroundRightSide{
+.bottleBackgroundRightSide {
     width: 304px;
     height: 361px;
     background: #FFFFFF;
@@ -125,84 +126,84 @@ body{
     border-radius: 12px;
     display: flex;
     justify-content: center;
-    align-items: center;  
-    margin: 24px ;
+    align-items: center;
+    margin: 24px;
 }
 
-.bottlePositionRightSide{
+.bottlePositionRightSide {
     width: 204.37px;
     height: 99px;
-    background:url('./PICS/24bttls.png');
-    background-repeat: no-repeat;  
+    background: url('./PICS/24bttls.png');
+    background-repeat: no-repeat;
 }
 
-.bottleTextBoxLeft{
+.bottleTextBoxLeft {
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
     font-size: 25px;
     line-height: 35px;
-    text-align: center; 
+    text-align: center;
     margin-top: 40%;
-    color: #4955F5;   
+    color: #4955F5;
 }
 
-.bottlePriceBoxLeft{
+.bottlePriceBoxLeft {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     line-height: 45px;
-    text-align: center; 
-    color: #4955F5; 
+    text-align: center;
+    color: #4955F5;
 }
 
-.bottleTextBoxCenter{
+.bottleTextBoxCenter {
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
     font-size: 25px;
-    text-align: center; 
+    text-align: center;
     margin-top: 60%;
-    color: #4955F5; 
+    color: #4955F5;
 }
 
-.bottlePriceBoxCenter{
+.bottlePriceBoxCenter {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 30;
     line-height: 45px;
-    text-align: center; 
+    text-align: center;
     color: #4955F5;
 }
 
-.bottleTextBoxRight{
+.bottleTextBoxRight {
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
     font-size: 25px;
     line-height: 35px;
-    text-align: center; 
+    text-align: center;
     margin-top: 50%;
-    color: #4955F5; 
+    color: #4955F5;
 }
 
-.bottlePriceBoxRight{
+.bottlePriceBoxRight {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 30;
     line-height: 45px;
-    text-align: center; 
+    text-align: center;
     color: #4955F5;
 }
 
-.priceCalculator{
+.priceCalculator {
     display: flex;
     justify-content: center;
-}   
+}
 
-.btnInfo{
+.btnInfo {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -218,11 +219,11 @@ body{
     color: #FFFFFF;
 }
 
-.quantityInputContainer{
+.quantityInputContainer {
     display: inline-block;
 }
 
-.quantityInput{
+.quantityInput {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -237,17 +238,15 @@ body{
     text-align: center;
     align-self: center;
     line-height: 30px;
-  
+
 }
 
-.billingContainer{}
-
-.billingBox{
+.billingBox {
     display: flex;
     flex-direction: row;
 }
 
-.billingHeader{
+.billingHeader {
     color: #4955F5;
     font-family: Roboto;
     font-style: normal;
@@ -256,11 +255,11 @@ body{
     line-height: 45px;
 }
 
-.formGroupContainer{
+.formGroupContainer {
     display: flow-root;
 }
 
-.form-group{
+.form-group {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -272,7 +271,7 @@ body{
     margin-right: 24px;
 }
 
-.form-control{
+.form-control {
     width: 140px;
     height: 33px;
     background: #FFFFFF;
@@ -281,31 +280,29 @@ body{
     border-radius: 5px;
 }
 
-.emailInput{
+.emailInput {
     width: 304px;
     height: 33px;
 }
 
-.bottlePackContainer{
+.bottlePackContainer {}
 
-}
-
-.bottlePackInfo{
+.bottlePackInfo {
     display: flex;
     align-items: center;
 }
 
-.borderLine{
+.borderLine {
     border: 1px solid #4955F5;
     width: 304px;
     height: 0px;
 }
 
-.inputPosition{
+.inputPosition {
     display: flex;
 }
 
-.bottlePackNumber{
+.bottlePackNumber {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -313,37 +310,36 @@ body{
     color: #4955F5;
 }
 
-.packQuantityNumber{
+.packQuantityNumber {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     color: #4955F5;
     margin: 17px;
-   
+
 }
-.totalNumberContainer{
+
+.totalNumberContainer {
     display: flex;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
-/* identical to box height */
-
-color: #4955F5;
+    color: #4955F5;
 }
 
-.totalAmountSmall{
+.totalAmountSmall {
     display: flex;
 
 }
 
-.totalNumber{
+.totalNumber {
     display: flex;
 }
 
-.totalNumberPosition{
+.totalNumberPosition {
     display: flex;
     justify-content: center;
     width: 140px;
@@ -353,37 +349,34 @@ color: #4955F5;
     margin-top: 10%;
 }
 
-.checkoutBackground{
+.checkoutBackground {
     display: flex;
     justify-content: center;
 }
 
-.buttonImg{
+.buttonImg {
     background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
-.checkoutButtonImg{
-
-}
-
-.billingInfo{
+.billingInfo {
     align-self: center;
 }
 
 
 .error {
-    display:none;
-    color:red;
+    display: none;
+    color: red;
 }
 
 
-#overlay{
+#overlay {
+    color: #ED5B55;
     position: fixed;
     display: none;
     width: 100%;
@@ -395,21 +388,21 @@ color: #4955F5;
     background: rgba(73, 85, 245, 0.8);
 }
 
-.viewOverlayContainer{
+.viewOverlayContainer {
     display: flex;
     justify-content: center;
 }
 
-.viewOverlay{
+.viewOverlay {
     width: 568px;
-    height: 212px;
+  
     background: #FFFFFF;
-    /* shaddow */
+    /* shadow */
     box-shadow: 0px 0px 18px rgba(73, 85, 245, 0.33);
     border-radius: 12px;
 }
 
-.textLayout{
+.textLayout {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -423,31 +416,85 @@ color: #4955F5;
 
 input:valid,
 input:in-range {
-    background:hsl(120, 50%, 90%);
+    background: hsl(120, 50%, 90%);
 
 }
 
 input:invalid,
 input:out-of-range {
-  
-    background:hsl(0, 50%, 90%);
-}
-input:focus + .help,
-input:invalid + .help {
-    display:inline-block;
+
+    background: hsl(0, 50%, 90%);
 }
 
-#bottlePackLargeSummary[data-count="0"], #bottlePackSmallSummary[data-count="0"], #bottlePackMediumSummary[data-count="0"]   {
-    display: none; 
+input:focus+.help,
+input:invalid+.help {
+    display: inline-block;
+}
+
+#bottlePackLargeSummary[data-count="0"],
+#bottlePackSmallSummary[data-count="0"],
+#bottlePackMediumSummary[data-count="0"] {
+    display: none;
     /* visibility:hidden ; View option  */
 }
 
+.viewName {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: #4955F5;
+    display: flex;
+    justify-content: center;
+}
+
+.viewNumberOfPackges {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+
+#firstnameOverlay {
+    margin-right: 5px;
+}
+
+.thanksYouSign {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+}
+
+.closeButtonImgContainer {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-right: 15px;
+
+    margin-top: 10px;
+}
+
+.closeButtonImg {
+
+    width: 14px;
+    height: 14px;
+
+}
 
 @media screen and (max-width: 1440px) and (min-width: 320px) {
     .billingBox {
         flex-direction: column-reverse;
     }
 }
+
 @media screen and (max-width: 980px) {
     .cardBox {
         flex-direction: column;
