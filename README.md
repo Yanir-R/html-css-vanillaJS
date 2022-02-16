@@ -13,7 +13,7 @@
 - [Motivation](#Motivation)
 
 ## Introduction
-This is tiny app to view and simulate items purchase, built with vanillaJS HTML & CSS3.
+This is a tiny app to view and simulate items purchaseed, built with vanillaJS HTML & CSS3.
 
 ## Features
 - [x] Able to add or remove items from his cart.
